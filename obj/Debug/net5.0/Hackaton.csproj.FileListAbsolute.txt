@@ -1,0 +1,16 @@
+C:\Users\abenitez\Desktop\Hackaton\obj\Debug\net5.0\Hackaton.csproj.AssemblyReference.cache
+C:\Users\abenitez\Desktop\Hackaton\obj\Debug\net5.0\Hackaton.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abenitez\Desktop\Hackaton\obj\Debug\net5.0\Hackaton.AssemblyInfoInputs.cache
+C:\Users\abenitez\Desktop\Hackaton\obj\Debug\net5.0\Hackaton.AssemblyInfo.cs
+C:\Users\abenitez\Desktop\Hackaton\obj\Debug\net5.0\Hackaton.csproj.CoreCompileInputs.cache
+C:\Users\abenitez\Desktop\Hackaton\bin\Debug\net5.0\Hackaton.exe
+C:\Users\abenitez\Desktop\Hackaton\bin\Debug\net5.0\Hackaton.deps.json
+C:\Users\abenitez\Desktop\Hackaton\bin\Debug\net5.0\Hackaton.runtimeconfig.json
+C:\Users\abenitez\Desktop\Hackaton\bin\Debug\net5.0\Hackaton.runtimeconfig.dev.json
+C:\Users\abenitez\Desktop\Hackaton\bin\Debug\net5.0\Hackaton.dll
+C:\Users\abenitez\Desktop\Hackaton\bin\Debug\net5.0\ref\Hackaton.dll
+C:\Users\abenitez\Desktop\Hackaton\bin\Debug\net5.0\Hackaton.pdb
+C:\Users\abenitez\Desktop\Hackaton\obj\Debug\net5.0\Hackaton.dll
+C:\Users\abenitez\Desktop\Hackaton\obj\Debug\net5.0\ref\Hackaton.dll
+C:\Users\abenitez\Desktop\Hackaton\obj\Debug\net5.0\Hackaton.pdb
+C:\Users\abenitez\Desktop\Hackaton\obj\Debug\net5.0\Hackaton.genruntimeconfig.cache
