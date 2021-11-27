@@ -27,7 +27,7 @@ namespace Emigrant.App.Dominio
 
         public String correo { get; set; }
 
-        public int telefono { get; set; }
+        public String telefono { get; set; }
 
         public String direccion { get; set; }
 

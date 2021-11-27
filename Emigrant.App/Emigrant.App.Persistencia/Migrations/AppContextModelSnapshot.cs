@@ -55,8 +55,8 @@ namespace Emigrant.App.Persistencia.Migrations
                     b.Property<string>("sit_laboral")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("telefono")
-                        .HasColumnType("int");
+                    b.Property<string>("telefono")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("tipo_documento")
                         .HasColumnType("int");

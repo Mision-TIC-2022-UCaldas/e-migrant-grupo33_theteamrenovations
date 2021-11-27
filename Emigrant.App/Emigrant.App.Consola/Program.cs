@@ -11,45 +11,37 @@ namespace Emigrant.App.Consola
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            /*
-            Docente docenteConsultado = ConsultarDocenteEstado(2);
-            Console.WriteLine(docenteConsultado.nombre);
-            Console.WriteLine(docenteConsultado.appellidos);
-            Console.WriteLine(docenteConsultado.estadoCovid_1);
-            Console.WriteLine(docenteConsultado.estadoCovid_1.Sistomas);
-            */
+
 
             CrearMigrante();
-            //ConsultarDocente(3);
-            //ConsultarDocentes();            
-            //EditarDocente(4);
-            //EliminarDocente(3);
+
+            /*
+            //ConsultarMigrante(3);
+            //ConsultarMigrantes();            
+            //EditarMigrante(4);
+            //EliminarMigrante(3);
             /*
             };
-
-            AgregarEstadoDocente(estadoNuevo,2);
             */
-            //EstadoCovid estadoCovidEncontrado  = _repoEstados.GetEstado(3);
-            //AgregarEstadoDocente(estadoCovidEncontrado,1);
 
         }
         //CRUD
-        //CrearDocente
+        //CrearMigrante
         private static void CrearMigrante()
         {
 
             var migrante = new Migrante
             {
-                nombre = "Maria",
-                apellidos = "Salcedo",
+                nombre = "Alberto",
+                apellidos = "Benitez",
                 tipo_documento = 1,
-                identificacion = 1105389345,
-                pais = "Venezuela",
+                identificacion = 94229312,
+                pais = "Ecuador",
                 fecha_nacimiento = DateTime.Now.ToString(),
                 correo = "abenitez@hotmail.com",
-                telefono = 312,
+                telefono = "312",
                 direccion = "carrera 8 N 10-19",
-                ciudad = "Armenia",
+                ciudad = "Cucuta",
                 sit_laboral = "Desempleado"
             };
             Migrante migranteGuardado = _repoMigrante.AddMigrante(migrante);
@@ -91,7 +83,7 @@ namespace Emigrant.App.Consola
                 pais = "Venezuela",
                 fecha_nacimiento = DateTime.Now.ToString(),
                 correo = "abenitez@hotmail.com",
-                telefono = 312677,
+                telefono = "312677",
                 direccion = "carrera 8 N 10-19",
                 ciudad = "Armenia",
                 sit_laboral = "Desempleado"

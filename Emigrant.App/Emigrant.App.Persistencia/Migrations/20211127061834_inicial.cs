@@ -35,7 +35,7 @@ namespace Emigrant.App.Persistencia.Migrations
                     pais = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     fecha_nacimiento = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    telefono = table.Column<int>(type: "int", nullable: false),
+                    telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ciudad = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     sit_laboral = table.Column<string>(type: "nvarchar(max)", nullable: true)

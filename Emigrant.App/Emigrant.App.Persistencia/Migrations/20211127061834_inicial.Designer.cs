@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Emigrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211127033922_inicial")]
+    [Migration("20211127061834_inicial")]
     partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,8 +57,8 @@ namespace Emigrant.App.Persistencia.Migrations
                     b.Property<string>("sit_laboral")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("telefono")
-                        .HasColumnType("int");
+                    b.Property<string>("telefono")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("tipo_documento")
                         .HasColumnType("int");
