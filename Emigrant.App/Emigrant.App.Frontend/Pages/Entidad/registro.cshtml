@@ -1,0 +1,76 @@
+@page
+@model Emigrant.App.Frontend.Pages.RegistroModel
+@{
+}
+<h1>Registro Entidad</h1>
+<form method="post">
+    <input type="hidden" asp-for="entidad.id">
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="entidad.nit"></label>
+            <input asp-for="entidad.nit" class="form-control">
+            <span class="text-danger" asp-validation-for="entidad.direccion"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="entidad.razon_Social"></label>
+            <input asp-for="entidad.razon_Social" class="form-control">
+            <span class="text-danger" asp-validation-for="entidad.ciudad"></span>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="entidad.direccion"></label>
+            <input asp-for="entidad.direccion" class="form-control">
+            <span class="text-danger" asp-validation-for="entidad.direccion"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="entidad.ciudad"></label>
+            <input asp-for="entidad.ciudad" class="form-control">
+            <span class="text-danger" asp-validation-for="entidad.ciudad"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label asp-for="entidad.telefonoEntidad"></label>
+            <input asp-for="entidad.telefonoEntidad" class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="entidad.web"></label>
+            <input asp-for="entidad.web" class="form-control">
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="entidad.sector"></label>
+            <input asp-for="entidad.sector" class="form-control">
+        </div>
+    </div>
+
+
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+            <label asp-for="entidad.correoEntidad"></label>
+            <input asp-for="entidad.correoEntidad" class="form-control">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label asp-for="entidad.tipoServicio"></label>
+            <select asp-for="entidad.tipoServicio" class="form-control" aria-label=".form-select-lg example">
+                <option selected>Seleccion tipo servicio</option>
+                <option value="1">Salud</option>
+                <option value="2">Juridico</option>
+                <option value="3">Viveres</option>
+                <option value="4">Comida</option>
+                <option value="5">Empleo</option>
+                <option value="6">Alojamiento temporal</option>
+                <option value="7">Alojamiento Permanente</option>
+                <option value="8">Educación</option>
+                <option value="9">Otro</option>
+            </select>
+        </div>
+
+
+    </div>
+    <button type="submit" class="btn btn-primary">Registrar</button>
+</form>
