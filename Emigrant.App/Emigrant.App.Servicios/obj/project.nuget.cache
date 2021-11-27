@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "gL07dZcrMPEh/g5Ln/jyu+FQoQDHS1c79c8jpoLqcfvsDZjEJb2mIlhaH2KjKzF7l7jSaZkwRZu5Xs2EXrfBQg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\abenitez\\Desktop\\repo\\e-migrant-grupo33_theteamrenovations\\Emigrant.App\\Emigrant.App.Servicios\\Emigrant.App.Servicios.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\abenitez\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\abenitez\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\abenitez\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\abenitez\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\abenitez\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\abenitez\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
