@@ -1,0 +1,74 @@
+@page
+@model Emigrant.App.Frontend.Pages.EditarModel
+@{
+}
+<h1>Registro Migrante</h1>
+<form method="post">
+    <input type="hidden" asp-for="migrante.id">
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="migrante.nombre"></label>
+            <input asp-for="migrante.nombre" class="form-control">
+            <span class="text-danger" asp-validation-for="migrante.nombre"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="migrante.apellidos"></label>
+            <input asp-for="migrante.apellidos" class="form-control">
+            <span class="text-danger" asp-validation-for="migrante.apellidos"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label asp-for="migrante.tipo_documento"></label>
+            <input asp-for="migrante.tipo_documento" class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="migrante.identificacion"></label>
+            <input asp-for="migrante.identificacion" class="form-control">
+            <span class="text-danger" asp-validation-for="migrante.identificacion"></span>
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="migrante.pais"></label>
+            <input asp-for="migrante.pais" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label asp-for="migrante.fecha_nacimiento"></label>
+            <input asp-for="migrante.fecha_nacimiento" class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="migrante.correo"></label>
+            <input asp-for="migrante.correo" class="form-control">
+            <span class="text-danger" asp-validation-for="migrante.correo"></span>
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="migrante.telefono"></label>
+            <input asp-for="migrante.telefono" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label asp-for="migrante.direccion"></label>
+            <input asp-for="migrante.direccion" class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="migrante.ciudad"></label>
+            <input asp-for="migrante.ciudad" class="form-control">
+            <span class="text-danger" asp-validation-for="migrante.ciudad"></span>
+        </div>
+        <div class="form-group col-md-4">
+            <label asp-for="migrante.sit_laboral"></label>
+            <input asp-for="migrante.sit_laboral" class="form-control">
+        </div>
+    </div>
+
+
+
+
+
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+</form>

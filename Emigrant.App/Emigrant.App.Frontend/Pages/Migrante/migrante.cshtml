@@ -1,0 +1,40 @@
+@page
+@model Emigrant.App.FrontEnd.Pages.MigrantesModel
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h1>Listado Docentes</h1>
+<table class="table">
+
+    @foreach (var migrante in Model.Migrantes)
+    {
+        <tr>
+            <td>@migrante.identificacion</td>
+            <td>@migrante.nombre</td>
+            <td>@migrante.apellidos</td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./" asp-route-migranteId="@migrante.id">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-secondary table-btn" asp-page="./" asp-route-migranteIdentificacion="@migrante.id">
+                    <i class="fas fa-address-book" aria-hidden="true"></i>
+                </a>
+            </td>
+
+            <td>
+                <a class="btn btn-danger table-btn" asp-page="./" asp-route-migranteIdentificacion="@migrante.id">
+                    <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                </a>
+            </td>
+        </tr>
+    }
+
+</table>
+<a asp-page=".\editar" class="btn btn-primary">Adicionar Docente</a>
