@@ -22,6 +22,7 @@
         <div class="form-group col-md-12">
             <label asp-for="necesidad.detalles"></label>
             <input asp-for="necesidad.detalles" class="form-control">
+            <span class="text-danger" asp-validation-for="necesidad.detalles"></span>
         </div>
     </div>
 
@@ -32,13 +33,14 @@
             <label asp-for="necesidad.tipoServicio"></label>
             <select asp-for="necesidad.tipoServicio" class="form-control" aria-label=".form-select-lg example">
                 <option selected>Seleccion tipo novedad</option>
-                <option value=0>Salud</option>
-                <option value=1>Juridico</option>
-                <option value=2>Empleo</option>
-                <option value=3>Alojamiento Temporal</option>
-                <option value=4>Alojamiento Permanente</option>
-                <option value=5>Educación</option>
+                <option value=1>Salud</option>
+                <option value=2>Juridico</option>
+                <option value=3>Empleo</option>
+                <option value=4>Alojamiento Temporal</option>
+                <option value=5>Alojamiento Permanente</option>
+                <option value=6>Educación</option>
             </select>
+            <span class="text-danger" asp-validation-for="necesidad.tipoServicio"></span>
         </div>
 
 
@@ -46,10 +48,11 @@
             <label asp-for="necesidad.prioridad"></label>
             <select asp-for="necesidad.prioridad" class="form-control" aria-label=".form-select-lg example">
                 <option selected>Seleccion ciudad</option>
-                <option value="0">Baja</option>
-                <option value="1">Media</option>
-                <option value="2">Alta</option>
+                <option value="1">Baja</option>
+                <option value="2">Media</option>
+                <option value="3">Alta</option>
             </select>
+            <span class="text-danger" asp-validation-for="necesidad.prioridad"></span>
         </div>
     </div>
 

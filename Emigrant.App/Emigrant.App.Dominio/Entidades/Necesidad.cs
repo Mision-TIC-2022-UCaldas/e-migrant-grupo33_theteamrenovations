@@ -7,12 +7,17 @@ namespace Emigrant.App.Dominio
     {
         public int id { get; set; }
 
-        [Required(ErrorMessage = "Campo nombre obligatorio")]
+        [Required(ErrorMessage = "Campo Detalle obligatorio")]
         [Display(Name = "Detalle Necesidad")]
         public String detalles { get; set; }
+
+        [Required(ErrorMessage = "Campo Tipo Servicio obligatorio")]
         [Display(Name = "Tipo Servicio")]
 
         public TipoServicio tipoServicio { get; set; }
+
+        [Required(ErrorMessage = "Campo Prioridad Servicio obligatorio")]
+        [Display(Name = "Prioridad")]
 
         public Prioridad prioridad { get; set; }
 
