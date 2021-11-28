@@ -1,0 +1,27 @@
+@page
+@model Emigrant.App.FrontEnd.Pages.listarNovedadesModel
+@{
+}
+
+<h1 class="titulo-registro mt-5 mb-5">Listado Novedades</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Descripcion</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var novedad in Model.Novedades)
+        {
+            <tr>
+                <th>@novedad.id</th>
+                <td>@novedad.tipoNovedad</td>
+                <td>@novedad.ciudad</td>
+                <td>@novedad.novedad</td>
+            </tr>
+        }
+    </tbody>
+</table>

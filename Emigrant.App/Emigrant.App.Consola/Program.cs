@@ -41,7 +41,7 @@ namespace Emigrant.App.Consola
                 correo = "abenitez@hotmail.com",
                 telefono = "312",
                 direccion = "carrera 8 N 10-19",
-                ciudad = "Cucuta",
+                ciudad = Ciudad.Pereira,
                 sit_laboral = "Desempleado"
             };
             Migrante migranteGuardado = _repoMigrante.AddMigrante(migrante);
@@ -85,7 +85,7 @@ namespace Emigrant.App.Consola
                 correo = "abenitez@hotmail.com",
                 telefono = "312677",
                 direccion = "carrera 8 N 10-19",
-                ciudad = "Armenia",
+                ciudad = Ciudad.Cali,
                 sit_laboral = "Desempleado"
             };
             var migranteActualizado = _repoMigrante.UpdateMigrante(migrante);

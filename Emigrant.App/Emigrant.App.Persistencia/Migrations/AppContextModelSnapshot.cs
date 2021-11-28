@@ -48,6 +48,7 @@ namespace Emigrant.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("telefonoEntidad")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("tipoServicio")
@@ -72,8 +73,8 @@ namespace Emigrant.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ciudad")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("ciudad")
+                        .HasColumnType("int");
 
                     b.Property<string>("correo")
                         .HasColumnType("nvarchar(max)");
@@ -106,6 +107,39 @@ namespace Emigrant.App.Persistencia.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Migrantes");
+                });
+
+            modelBuilder.Entity("Emigrant.App.Dominio.Novedad", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("ciudad")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("estado")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("fechaNovedad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("id_entidad")
+                        .HasColumnType("int");
+
+                    b.Property<string>("novedad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("numeroDias")
+                        .HasColumnType("int");
+
+                    b.Property<int>("tipoNovedad")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Novedades");
                 });
 
             modelBuilder.Entity("Emigrant.App.Dominio.grupoMigrante", b =>
@@ -142,6 +176,12 @@ namespace Emigrant.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("id_servicio")
+                        .HasColumnType("int");
+
+                    b.Property<int>("prioridad")
+                        .HasColumnType("int");
+
+                    b.Property<int>("tipoServicio")
                         .HasColumnType("int");
 
                     b.HasKey("id");

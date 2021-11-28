@@ -31,7 +31,7 @@ namespace Emigrant.App.Dominio
 
         public String direccion { get; set; }
 
-        public String ciudad { get; set; }
+        public Ciudad ciudad { get; set; }
 
         public String sit_laboral { get; set; }
     }

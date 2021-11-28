@@ -17,7 +17,7 @@ namespace Emigrant.App.Persistencia.Migrations
                     razon_Social = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     direccion = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ciudad = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    telefonoEntidad = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    telefonoEntidad = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     correoEntidad = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     web = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     sector = table.Column<int>(type: "int", nullable: false),
@@ -58,7 +58,7 @@ namespace Emigrant.App.Persistencia.Migrations
                     correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ciudad = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ciudad = table.Column<int>(type: "int", nullable: false),
                     sit_laboral = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -73,11 +73,32 @@ namespace Emigrant.App.Persistencia.Migrations
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     id_servicio = table.Column<int>(type: "int", nullable: false),
-                    detalles = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    detalles = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    tipoServicio = table.Column<int>(type: "int", nullable: false),
+                    prioridad = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Necesidades", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Novedades",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    tipoNovedad = table.Column<int>(type: "int", nullable: false),
+                    ciudad = table.Column<int>(type: "int", nullable: false),
+                    fechaNovedad = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    numeroDias = table.Column<int>(type: "int", nullable: false),
+                    novedad = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    estado = table.Column<bool>(type: "bit", nullable: false),
+                    id_entidad = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Novedades", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -111,6 +132,9 @@ namespace Emigrant.App.Persistencia.Migrations
 
             migrationBuilder.DropTable(
                 name: "Necesidades");
+
+            migrationBuilder.DropTable(
+                name: "Novedades");
 
             migrationBuilder.DropTable(
                 name: "Servicios");
