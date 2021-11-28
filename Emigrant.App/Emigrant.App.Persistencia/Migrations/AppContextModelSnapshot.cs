@@ -19,6 +19,48 @@ namespace Emigrant.App.Persistencia.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
+            modelBuilder.Entity("Emigrant.App.Dominio.Entidad", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("ciudad")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("correoEntidad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("direccion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("nit")
+                        .HasColumnType("int");
+
+                    b.Property<string>("razon_Social")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("sector")
+                        .HasColumnType("int");
+
+                    b.Property<string>("telefonoEntidad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("tipoServicio")
+                        .HasColumnType("int");
+
+                    b.Property<string>("web")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Entidades");
+                });
+
             modelBuilder.Entity("Emigrant.App.Dominio.Migrante", b =>
                 {
                     b.Property<int>("id")

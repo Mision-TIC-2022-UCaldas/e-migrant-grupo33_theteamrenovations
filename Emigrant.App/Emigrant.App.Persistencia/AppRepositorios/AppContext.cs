@@ -10,6 +10,9 @@ namespace Emigrant.App.Persistencia
         public DbSet<necesidades> Necesidades { get; set; }
         public DbSet<grupoMigrante> Grupos { get; set; }
 
+        public DbSet<Entidad> Entidades { get; set; }
+
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

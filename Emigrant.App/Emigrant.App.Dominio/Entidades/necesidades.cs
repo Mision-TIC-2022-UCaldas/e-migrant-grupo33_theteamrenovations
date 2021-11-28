@@ -15,6 +15,10 @@ namespace Emigrant.App.Dominio
 
         public String detalles { get; set; }
 
+        public TipoServicio tipoServicio { get; set; }
+
+        public Prioridad prioridad { get; set; }
+
 
     }
 }

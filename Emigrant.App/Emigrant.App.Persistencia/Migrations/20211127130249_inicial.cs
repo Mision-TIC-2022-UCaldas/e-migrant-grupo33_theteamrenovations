@@ -8,6 +8,27 @@ namespace Emigrant.App.Persistencia.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Entidades",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    nit = table.Column<int>(type: "int", nullable: false),
+                    razon_Social = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    direccion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ciudad = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    telefonoEntidad = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    correoEntidad = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    web = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    sector = table.Column<int>(type: "int", nullable: false),
+                    tipoServicio = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Entidades", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Grupos",
                 columns: table => new
                 {
@@ -79,6 +100,9 @@ namespace Emigrant.App.Persistencia.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Entidades");
+
             migrationBuilder.DropTable(
                 name: "Grupos");
 

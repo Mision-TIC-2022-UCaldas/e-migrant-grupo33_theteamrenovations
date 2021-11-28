@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Emigrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211127061834_inicial")]
+    [Migration("20211127130249_inicial")]
     partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,48 @@ namespace Emigrant.App.Persistencia.Migrations
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
+
+            modelBuilder.Entity("Emigrant.App.Dominio.Entidad", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("ciudad")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("correoEntidad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("direccion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("nit")
+                        .HasColumnType("int");
+
+                    b.Property<string>("razon_Social")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("sector")
+                        .HasColumnType("int");
+
+                    b.Property<string>("telefonoEntidad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("tipoServicio")
+                        .HasColumnType("int");
+
+                    b.Property<string>("web")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Entidades");
+                });
 
             modelBuilder.Entity("Emigrant.App.Dominio.Migrante", b =>
                 {
