@@ -23,15 +23,15 @@ namespace Emigrant.App.Persistencia
             return migranteAdicionado.Entity;
         }
         //BuscarMigrante
-        Migrante IRepositorioMigrante.GetMigrante(int id)
+        Migrante IRepositorioMigrante.GetMigrante(int identificacion)
         {
-            var migranteEncontrado = _appContext.Migrantes.FirstOrDefault(p => p.id == id);
+            var migranteEncontrado = _appContext.Migrantes.FirstOrDefault(p => p.identificacion == identificacion);
             return migranteEncontrado;
         }
         //ActualizarMigrante
         Migrante IRepositorioMigrante.UpdateMigrante(Migrante migrante)
         {
-            var migranteEncontrado = _appContext.Migrantes.FirstOrDefault(p => p.id == migrante.id);
+            var migranteEncontrado = _appContext.Migrantes.FirstOrDefault(p => p.identificacion == migrante.identificacion);
             if (migranteEncontrado != null)
             {
                 migranteEncontrado.nombre = migrante.nombre;

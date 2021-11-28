@@ -7,12 +7,18 @@
     <input type="hidden" asp-for="migrante.id">
 
     <div class="form-row">
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-2">
+            <label asp-for="migrante.identificacion"></label>
+            <input type="text" asp-for="migrante.identificacion" class="form-control">
+            <span class="text-danger" asp-validation-for="migrante.identificacion"></span>
+        </div>
+
+        <div class="form-group col-md-5">
             <label asp-for="migrante.nombre"></label>
             <input asp-for="migrante.nombre" class="form-control">
             <span class="text-danger" asp-validation-for="migrante.nombre"></span>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-5">
             <label asp-for="migrante.apellidos"></label>
             <input asp-for="migrante.apellidos" class="form-control">
             <span class="text-danger" asp-validation-for="migrante.apellidos"></span>
@@ -21,46 +27,57 @@
     <div class="form-row">
         <div class="form-group col-md-2">
             <label asp-for="migrante.tipo_documento"></label>
-            <input asp-for="migrante.tipo_documento" class="form-control">
-        </div>
-        <div class="form-group col-md-6">
-            <label asp-for="migrante.identificacion"></label>
-            <input asp-for="migrante.identificacion" class="form-control">
-            <span class="text-danger" asp-validation-for="migrante.identificacion"></span>
+            <select asp-for="migrante.tipo_documento" class="form-control" aria-label=".form-select-lg example">
+                <option selected>Seleccion ciudad</option>
+                <option value=0>Cedula Ciudadania</option>
+                <option value=1>Cédula Extranjeria</option>
+                <option value=2>Pasaporte</option>
+                <option value=3>Tarjeta de Identidad</option>
+                <option value=4>Registro civil de nacimiento</option>
+            </select>
         </div>
         <div class="form-group col-md-4">
             <label asp-for="migrante.pais"></label>
             <input asp-for="migrante.pais" class="form-control">
         </div>
+        <div class="form-group col-md-3">
+            <label asp-for="migrante.ciudad"></label>
+            <select asp-for="migrante.ciudad" class="form-control" aria-label=".form-select-lg example">
+                <option selected>Seleccion ciudad</option>
+                <option value="0">Cali</option>
+                <option value="1">Medellin</option>
+                <option value="2">Bogotá</option>
+                <option value="3">Cucuta</option>
+                <option value="4">Barranquilla</option>
+                <option value="5">Pereira</option>
+                <option value="6">Manizales</option>
+                <option value="7">Cartagena</option>
+                <option value="8">Armenia</option>
+                <option value="9">Ibague</option>
+                <option value="10">Pasto</option>
+            </select>
+        </div>
+        <div class="form-group col-md-3">
+            <label asp-for="migrante.fecha_nacimiento"></label>
+            <input asp-for="migrante.fecha_nacimiento" class="form-control">
+        </div>
     </div>
 
     <div class="form-row">
         <div class="form-group col-md-2">
-            <label asp-for="migrante.fecha_nacimiento"></label>
-            <input asp-for="migrante.fecha_nacimiento" class="form-control">
-        </div>
-        <div class="form-group col-md-6">
             <label asp-for="migrante.correo"></label>
             <input asp-for="migrante.correo" class="form-control">
             <span class="text-danger" asp-validation-for="migrante.correo"></span>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-2">
             <label asp-for="migrante.telefono"></label>
             <input asp-for="migrante.telefono" class="form-control">
         </div>
-    </div>
-
-    <div class="form-row">
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-6">
             <label asp-for="migrante.direccion"></label>
             <input asp-for="migrante.direccion" class="form-control">
         </div>
-        <div class="form-group col-md-6">
-            <label asp-for="migrante.ciudad"></label>
-            <input asp-for="migrante.ciudad" class="form-control">
-            <span class="text-danger" asp-validation-for="migrante.ciudad"></span>
-        </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-2">
             <label asp-for="migrante.sit_laboral"></label>
             <input asp-for="migrante.sit_laboral" class="form-control">
         </div>

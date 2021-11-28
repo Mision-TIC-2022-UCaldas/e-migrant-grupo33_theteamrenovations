@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Emigrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211128131325_inicial")]
+    [Migration("20211128173155_inicial")]
     partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -125,12 +125,14 @@ namespace Emigrant.App.Persistencia.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("fechaNovedad")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("id_entidad")
                         .HasColumnType("int");
 
                     b.Property<string>("novedad")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("numeroDias")
@@ -151,6 +153,9 @@ namespace Emigrant.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int?>("Migranteid")
+                        .HasColumnType("int");
+
                     b.Property<int>("id_migrante")
                         .HasColumnType("int");
 
@@ -163,6 +168,8 @@ namespace Emigrant.App.Persistencia.Migrations
 
                     b.HasKey("id");
 
+                    b.HasIndex("Migranteid");
+
                     b.ToTable("Grupos");
                 });
 
@@ -173,12 +180,12 @@ namespace Emigrant.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int?>("Migranteid")
+                        .HasColumnType("int");
+
                     b.Property<string>("detalles")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("id_servicio")
-                        .HasColumnType("int");
 
                     b.Property<int>("prioridad")
                         .HasColumnType("int");
@@ -187,6 +194,8 @@ namespace Emigrant.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("id");
+
+                    b.HasIndex("Migranteid");
 
                     b.ToTable("Necesidades");
                 });
@@ -217,6 +226,27 @@ namespace Emigrant.App.Persistencia.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Servicios");
+                });
+
+            modelBuilder.Entity("Emigrant.App.Dominio.grupoMigrante", b =>
+                {
+                    b.HasOne("Emigrant.App.Dominio.Migrante", null)
+                        .WithMany("GrupoMigrantes")
+                        .HasForeignKey("Migranteid");
+                });
+
+            modelBuilder.Entity("Emigrant.App.Dominio.necesidades", b =>
+                {
+                    b.HasOne("Emigrant.App.Dominio.Migrante", null)
+                        .WithMany("necesidades")
+                        .HasForeignKey("Migranteid");
+                });
+
+            modelBuilder.Entity("Emigrant.App.Dominio.Migrante", b =>
+                {
+                    b.Navigation("GrupoMigrantes");
+
+                    b.Navigation("necesidades");
                 });
 #pragma warning restore 612, 618
         }

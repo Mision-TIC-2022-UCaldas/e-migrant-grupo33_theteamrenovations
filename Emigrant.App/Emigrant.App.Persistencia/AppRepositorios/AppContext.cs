@@ -7,7 +7,7 @@ namespace Emigrant.App.Persistencia
     {
         public DbSet<Migrante> Migrantes { get; set; }
         public DbSet<servicios> Servicios { get; set; }
-        public DbSet<necesidades> Necesidades { get; set; }
+        public DbSet<Necesidad> Necesidades { get; set; }
         public DbSet<grupoMigrante> Grupos { get; set; }
         public DbSet<Novedad> Novedades { get; set; }
         public DbSet<Entidad> Entidades { get; set; }

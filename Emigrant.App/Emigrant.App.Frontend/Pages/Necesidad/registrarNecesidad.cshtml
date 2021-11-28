@@ -1,0 +1,68 @@
+@page
+@model Emigrant.App.Frontend.Pages.RegistroNovedadModel
+@{
+}
+<h1 class="titulo1">Registro Necesidad</h1>
+<form method="post">
+    <input type="hidden" asp-for="novedad.id">
+
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+            <label asp-for="novedad.tipoNovedad"></label>
+            <select asp-for="novedad.tipoNovedad" class="form-control" aria-label=".form-select-lg example">
+                <option selected>Seleccion tipo novedad</option>
+                <option value="0">Noticia</option>
+                <option value="1">Normatividad</option>
+            </select>
+        </div>
+
+
+        <div class="form-group col-md-6">
+            <label asp-for="novedad.ciudad"></label>
+            <select asp-for="novedad.ciudad" class="form-control" aria-label=".form-select-lg example">
+                <option selected>Seleccion ciudad</option>
+                <option value="0">Cali</option>
+                <option value="1">Medellin</option>
+                <option value="2">Bogotá</option>
+                <option value="3">Cucuta</option>
+                <option value="4">Barranquilla</option>
+                <option value="5">Pereira</option>
+                <option value="6">Manizales</option>
+                <option value="7">Cartagena</option>
+                <option value="8">Armenia</option>
+                <option value="9">Ibague</option>
+                <option value="10">Pasto</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="novedad.fechaNovedad"></label>
+            <input asp-for="novedad.fechaNovedad" class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="novedad.numeroDias"></label>
+            <input asp-for="novedad.numeroDias" class="form-control">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label asp-for="novedad.novedad"></label>
+            <input asp-for="novedad.novedad" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" asp-for="novedad.estado" type="checkbox" id="flexSwitchCheckChecked"
+                checked>
+            <label class="form-check-label" asp-for="novedad.estado" for="flexSwitchCheckChecked">Estado</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-5">Registrar</button>
+    </div>
+
+</form>
