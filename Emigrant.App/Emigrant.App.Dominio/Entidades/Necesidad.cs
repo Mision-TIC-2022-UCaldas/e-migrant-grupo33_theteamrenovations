@@ -10,10 +10,13 @@ namespace Emigrant.App.Dominio
         [Required(ErrorMessage = "Campo nombre obligatorio")]
         [Display(Name = "Detalle Necesidad")]
         public String detalles { get; set; }
+        [Display(Name = "Tipo Servicio")]
 
         public TipoServicio tipoServicio { get; set; }
 
         public Prioridad prioridad { get; set; }
+
+        public String Migrante { get; set; }
 
     }
 }

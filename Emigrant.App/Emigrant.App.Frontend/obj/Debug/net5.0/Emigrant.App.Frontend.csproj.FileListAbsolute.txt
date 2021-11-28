@@ -173,3 +173,4 @@ C:\Users\abenitez\Desktop\repo\e-migrant-grupo33_theteamrenovations\Emigrant.App
 C:\Users\abenitez\Desktop\repo\e-migrant-grupo33_theteamrenovations\Emigrant.App\Emigrant.App.Frontend\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\abenitez\Desktop\repo\e-migrant-grupo33_theteamrenovations\Emigrant.App\Emigrant.App.Frontend\obj\Debug\net5.0\Razor\Pages\Novedades\registroNovedad.cshtml.g.cs
 C:\Users\abenitez\Desktop\repo\e-migrant-grupo33_theteamrenovations\Emigrant.App\Emigrant.App.Frontend\obj\Debug\net5.0\Razor\Pages\Novedades\listarNovedades.cshtml.g.cs
+C:\Users\abenitez\Desktop\repo\e-migrant-grupo33_theteamrenovations\Emigrant.App\Emigrant.App.Frontend\obj\Debug\net5.0\Razor\Pages\Necesidad\registrarNecesidad.cshtml.g.cs

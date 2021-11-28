@@ -18,6 +18,7 @@ namespace Emigrant.App.Persistencia
         //AgregarNecesidad
         Necesidad IRepositorioNecesidad.AddNecesidad(Necesidad necesidad)
         {
+            Console.Write(necesidad);
             var necesidadAdicionado = _appContext.Necesidades.Add(necesidad);
             _appContext.SaveChanges();
             return necesidadAdicionado.Entity;

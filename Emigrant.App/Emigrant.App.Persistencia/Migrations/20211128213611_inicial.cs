@@ -118,6 +118,7 @@ namespace Emigrant.App.Persistencia.Migrations
                     detalles = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     tipoServicio = table.Column<int>(type: "int", nullable: false),
                     prioridad = table.Column<int>(type: "int", nullable: false),
+                    Migrante = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Migranteid = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>

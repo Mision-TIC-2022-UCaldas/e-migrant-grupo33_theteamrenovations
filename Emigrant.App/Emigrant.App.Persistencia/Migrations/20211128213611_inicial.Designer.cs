@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Emigrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211128173155_inicial")]
+    [Migration("20211128213611_inicial")]
     partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -111,6 +111,36 @@ namespace Emigrant.App.Persistencia.Migrations
                     b.ToTable("Migrantes");
                 });
 
+            modelBuilder.Entity("Emigrant.App.Dominio.Necesidad", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Migrante")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("Migranteid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("detalles")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("prioridad")
+                        .HasColumnType("int");
+
+                    b.Property<int>("tipoServicio")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("Migranteid");
+
+                    b.ToTable("Necesidades");
+                });
+
             modelBuilder.Entity("Emigrant.App.Dominio.Novedad", b =>
                 {
                     b.Property<int>("id")
@@ -173,33 +203,6 @@ namespace Emigrant.App.Persistencia.Migrations
                     b.ToTable("Grupos");
                 });
 
-            modelBuilder.Entity("Emigrant.App.Dominio.necesidades", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int?>("Migranteid")
-                        .HasColumnType("int");
-
-                    b.Property<string>("detalles")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("prioridad")
-                        .HasColumnType("int");
-
-                    b.Property<int>("tipoServicio")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("Migranteid");
-
-                    b.ToTable("Necesidades");
-                });
-
             modelBuilder.Entity("Emigrant.App.Dominio.servicios", b =>
                 {
                     b.Property<int>("id")
@@ -228,17 +231,17 @@ namespace Emigrant.App.Persistencia.Migrations
                     b.ToTable("Servicios");
                 });
 
+            modelBuilder.Entity("Emigrant.App.Dominio.Necesidad", b =>
+                {
+                    b.HasOne("Emigrant.App.Dominio.Migrante", null)
+                        .WithMany("necesidades")
+                        .HasForeignKey("Migranteid");
+                });
+
             modelBuilder.Entity("Emigrant.App.Dominio.grupoMigrante", b =>
                 {
                     b.HasOne("Emigrant.App.Dominio.Migrante", null)
                         .WithMany("GrupoMigrantes")
-                        .HasForeignKey("Migranteid");
-                });
-
-            modelBuilder.Entity("Emigrant.App.Dominio.necesidades", b =>
-                {
-                    b.HasOne("Emigrant.App.Dominio.Migrante", null)
-                        .WithMany("necesidades")
                         .HasForeignKey("Migranteid");
                 });
 
