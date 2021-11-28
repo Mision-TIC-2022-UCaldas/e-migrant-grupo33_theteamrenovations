@@ -6,8 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Emigrant.App.Persistencia;
 using Emigrant.App.Dominio;
+using Microsoft.AspNetCore.Authorization;
+
 namespace Emigrant.App.Frontend.Pages
 {
+    [Authorize]
     public class RegistroModel : PageModel
     {
 
@@ -58,7 +61,7 @@ namespace Emigrant.App.Frontend.Pages
                     _repoEntidad.AddEntidad(entidad);
                 }
             }
-            return RedirectToPage("../migrante/migrante");
+            return RedirectToPage("./listarEntidades.cshtml");
         }
     }
 }
